@@ -10,3 +10,4 @@ button2.addEventListener('click' , () => {
     counterValue -= 1;
     numbers.innerHTML = counterValue;
 })
+

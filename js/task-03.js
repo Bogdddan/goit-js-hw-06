@@ -16,11 +16,12 @@ const images = [
 
 const ul = document.querySelector('.gallery');
 const img = document.querySelectorAll('.galery-img');
-
+const p = document.querySelector('.photoP');
 const addimg = ({url , alt}) => {
   return `
     <li class = "galery-img">
-      <img src="${url}" alt="${alt}" width = 300px height = 200px>
+      <img src="${url}" alt="${alt}" width = 350px height = 200px>
+      <p class = "photoP">${alt}</p>
     </li>
   `
 };
@@ -28,19 +29,8 @@ const dgsug = images.map(addimg).join('');
 
 ul.insertAdjacentHTML('beforeend' , dgsug);
 
-ul.style.display = 'flexbox';
 
-// ul
-// const galleryList = document.querySelector('.gallery');
-
-// const createGalleryItem = ({ url, alt }) => {
-//   return `
-//     <li class="gallery__item">
-//       <img class="gallery__image" src="${url}" alt="${alt}">
-//     </li>
-//   `
-// };
-
-// const galleryMarkup = images.map(createGalleryItem).join('');
-
-// galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
+ul.style.listStyle = 'none';
+ul.style.display = 'flex';
+ul.style.gap = '15px';
+console.log(ul.style);
