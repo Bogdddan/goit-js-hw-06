@@ -32,5 +32,7 @@ ul.insertAdjacentHTML('beforeend' , dgsug);
 
 ul.style.listStyle = 'none';
 ul.style.display = 'flex';
+ul.style.alignItems = 'center';
+ul.style.justifyContent = 'center';
 ul.style.gap = '15px';
 console.log(ul.style);
